@@ -1,0 +1,490 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../font/Rubik/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+/*ИКОНИЧЕСКИЙ ШРИФТ*/
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot');
+    src: url('../font/fontello.eot') format('embedded-opentype'),
+    url('../font/fontello.woff') format('woff'),
+    url('../font/fontello.ttf') format('truetype'),
+    url('../font/fontello.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .icon-up-open:before { content: '\e800'; }
+  .icon-star:before { content: '\e801'; }
+  .icon-phone:before { content: '\e802'; }
+  .icon-mail:before { content: '\e803'; }
+  .icon-home:before { content: '\e804'; }
+  .icon-clock:before { content: '\e80a'; }
+  .icon-thumbs-up:before { content: '\e80f'; }
+  .icon-mail-alt:before { content: '\f0e0'; }
+  .icon-chat-empty:before { content: '\f0e6'; }
+  .icon-angle-right:before { content: '\f105'; }
+  .icon-angle-down:before { content: '\f107'; }
+  .icon-skype:before { content: '\f17e'; }
+  .icon-vkontakte:before { content: '\f189'; }
+  .icon-whatsapp:before { content: '\f232'; }
+  .icon-facebook-squared:before { content: '\f308'; }
+  /*КОНЕЦ ИКОНИЧЕСКОГО ШРИФТА*/
+  
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+  ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+  display: block;
+}
+
+body
+{
+  line-height: 1;
+  font-family: 'Rubik', sans-serif;
+}
+
+ol, ul
+{
+  list-style: none;
+}
+
+blockquote, q
+{
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after
+{
+  content: '';
+  content: none;
+}
+
+table
+{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li a:focus {
+    outline: 0;
+}
+/*КОНЕЦ RESET*/
+
+/*НАЧАЛО ШАПКИ*/
+
+.top-top-container {
+    background-image: url('../img/back/back-top.png');
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+.top-container {
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: space-around;
+}
+
+.nazv {
+    font-family: 'Righteous', cursive;
+    text-shadow: 6px 3px 6px grey;
+    padding: 1em 0 0 0;
+    margin-left: 5%;
+    font-size: 70px;
+}
+
+.container_teladress {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 1em 1em;
+    margin-right: 5%;
+    flex-wrap: wrap;
+}
+
+.teladress {
+    margin: 0.5em 0 0 0;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: right;
+}
+
+.teladress .icon-phone:before {
+    font-size: 20px;
+  }
+
+.teladress span {
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.menu {
+    margin-top: 1em;
+    font-size: 22px;
+    text-align: right;
+}
+
+.menu li {
+    display: inline;
+    border-bottom: 1em solid transparent;
+    text-align: right;
+    position: relative;
+}
+
+.menu li:not(:first-child) {
+    margin-left: 1em;
+}
+
+.menu ul li {
+    transition: 0.3s color;
+}
+
+.menu ul li:hover, .menu ul li a:target {
+    color: #faaa2b;
+}
+
+#dop-menu {
+    visibility: hidden;
+    background-color: rgba(233, 233, 233, 0.9);
+    position: absolute;
+    z-index: 4;
+    width: 11em;
+    display: block;
+    color: black;
+    left: 50%;
+    margin-top: 1em;
+    margin-left: -5em;
+}
+
+li:hover #dop-menu {
+    visibility: visible;
+    animation: anim1 0.5s ease-in;
+}
+
+@keyframes anim1 {
+    from {margin-top: 220px; opacity: 0;}
+    to {margin-top: 1em; opacity: 1;}
+}
+
+#dop-menu li {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    border: 0;
+    margin: 0;
+}
+/*!!!!!!!!!!!!!!! КОНЕЦ ШАПКИ !!!!!!!!!!!!!!!*/
+
+/*НАЧАЛО КАРТЫ*/
+.maps {
+    text-align: center;
+    background:
+    radial-gradient(#faaa2b -4px, transparent 10px),
+    radial-gradient(#faaa2b -4px, transparent 10px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 75px, transparent 75px, #A4A4A4 75px, #a4a4a4 75px, transparent 78px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #FFF;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-attachment: fixed;
+    height:30em;
+}
+
+.maps iframe {
+    width: 70%;
+    height: 30em;
+}
+
+
+/*КОНЕЦ КАРТЫ*/
+
+/*НАЧАЛО АДРЕСА И КОНТАКТЫ*/
+
+.address-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.address {
+    flex-grow: 1;
+}
+
+.forms {
+    flex-grow: 3;
+}
+
+.address-container h2 {
+    font-size: 24px;
+    font-family: serif;
+    margin-bottom: 2em;
+}
+
+.address-container > div {
+    margin: 2em 2em;
+}
+
+
+.address-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.address-name .container-icon1 {
+    background: #faaa2b;
+    font-size: 48px;
+    color: white;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    margin: 0 0.5em 0 0;
+    transition: 0.3s all;
+}
+
+.container-icon1 div {
+    margin-top: 11px;
+}
+
+.address-name .address-text {
+    line-height: 2.2;
+    font-size: 14px;
+    transition: 0.3s color;
+}
+
+.address-text a {
+    transition: 0.3s color;
+}
+
+.address-text a:hover {
+    color: #faaa2b;
+}
+
+div.address-name:hover .container-icon1 {
+    background: white;
+    color: #faaa2b;
+}
+
+.right-col {
+    display: none;
+}
+/*начало формы*/
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input, textarea {
+    margin-bottom: 1em;
+    border: none;
+    background: #ededed;
+    padding: 1em;
+    font-size: 16px;
+    transition: 0.3s;
+    font-family: 'Rubik', sans-serif;
+}
+
+.input-submit {
+    width: 10em;
+    cursor: pointer;
+    background: #faaa2b;
+    transition: 0.3s;
+    color: white;
+}
+
+.input-submit:hover {
+    background: #2e1701;
+    
+}
+
+.input-name, .input-email, .input-tel {
+  height: 30px;
+}
+
+input:focus {
+    border: solid #faaa2b 1px;
+    box-shadow: 0 0 23px gray;
+}
+/*конец формы*/
+
+
+/*КОНЕЦ АДРЕСА И КОНТАКТЫ*/
+
+/******НАЧАЛО МЕДИА*********/
+
+@media only all and (max-width: 1300px) {
+    /*начало шапки*/
+    .top-top-container .top-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top-container .nazv, .top-container .container_teladress {
+        margin: 0 auto;
+    }
+
+    .container_teladress .teladress {
+        text-align: center;
+    }
+    /*конец шапки*/
+}    
+    
+
+@media only all and (max-width: 1000px) {
+    /*начало карты*/
+    div.maps iframe {
+        width: 100%;
+    }
+    /*конец карты*/
+
+    /*начало адреса и контакты*/
+    div.address-container {
+        flex-direction: column-reverse;
+    }
+
+    .address {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    div.right-col {
+        display: block;
+    }
+    /*конец адреса и контакты*/
+
+    
+}
+
+
+@media only all and (max-width: 700px) {
+    /*начало шапки*/
+    div.nazv {
+        font-size: 40px;
+    }
+
+    div.teladress {
+        font-size: 24px;
+    }
+
+    div.teladress span {
+        font-size: 12px;
+    }
+
+    div.menu {
+        font-size: 17px;
+    }
+
+    /*конец шапки*/
+
+    /*начало подвала*/
+    div.footer p {
+        font-size: 11px;
+    }
+
+    /*конец подвала*/
+}
+/*********КОНЕЦ МЕДИА**********/
+
+
+/*НАЧАЛО ПОДВАЛА*/
+
+.footer {
+    background: #ededed;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer #policy {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: solid black 1px;
+}
+
+.footer a {
+    transition: 0.3s color;
+}
+
+.footer a:hover {
+    color: #faaa2b;
+}
+
+/*кнопка наверх*/
+#backTop {
+    height: 60px;
+    width: 60px;
+    background: #faaa2b;
+    border-radius: 25%;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 2.8;
+    animation: buttontop 1s ease-in-out;
+    transition: transform 1s;
+}
+
+#backTop:hover {
+    transform: scale(1.1);
+}
+
+@keyframes buttontop {
+    from {opacity: 0; transform: translateY(-140%);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/*максимальная ширина*/
+.wrapper {
+    max-width: 1920px;
+    margin: auto;
+}
+
+/*плавная загрузка страницы*/
+@keyframes fade-in {   
+    0% {opacity: 0;}
+    100% {opacity: 1;}   
+}
+ 
+body {
+  animation: fade-in 1.5s linear;
+}

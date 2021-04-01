@@ -1,0 +1,752 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('../font/Rubik/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+/*ИКОНИЧЕСКИЙ ШРИФТ*/
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot');
+    src: url('../font/fontello.eot') format('embedded-opentype'),
+    url('../font/fontello.woff') format('woff'),
+    url('../font/fontello.ttf') format('truetype'),
+    url('../font/fontello.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .icon-up-open:before { content: '\e800'; }
+  .icon-star:before { content: '\e801'; }
+  .icon-phone:before { content: '\e802'; }
+  .icon-mail:before { content: '\e803'; }
+  .icon-home:before { content: '\e804'; }
+  .icon-clock:before { content: '\e80a'; }
+  .icon-thumbs-up:before { content: '\e80f'; }
+  .icon-mail-alt:before { content: '\f0e0'; }
+  .icon-chat-empty:before { content: '\f0e6'; }
+  .icon-angle-right:before { content: '\f105'; }
+  .icon-angle-down:before { content: '\f107'; }
+  .icon-skype:before { content: '\f17e'; }
+  .icon-vkontakte:before { content: '\f189'; }
+  .icon-whatsapp:before { content: '\f232'; }
+  .icon-facebook-squared:before { content: '\f308'; }
+  /*КОНЕЦ ИКОНИЧЕСКОГО ШРИФТА*/
+  
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+  ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+  display: block;
+}
+
+body
+{
+  line-height: 1;
+  font-family: 'Rubik', sans-serif;
+}
+
+ol, ul
+{
+  list-style: none;
+}
+
+blockquote, q
+{
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after
+{
+  content: '';
+  content: none;
+}
+
+table
+{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li a:focus {
+    outline: 0;
+}
+/*КОНЕЦ RESET*/
+
+/*НАЧАЛО ШАПКИ*/
+
+.top-top-container {
+    background-image: url('../img/back/back-top.png');
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+.top-container {
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: space-around;
+}
+
+.nazv {
+    font-family: 'Righteous', cursive;
+    text-shadow: 6px 3px 6px grey;
+    padding: 1em 0 0 0;
+    margin-left: 5%;
+    font-size: 70px;
+}
+
+.container_teladress {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 1em 1em;
+    margin-right: 5%;
+    flex-wrap: wrap;
+}
+
+.teladress {
+    margin: 0.5em 0 0 0;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: right;
+}
+
+.teladress .icon-phone:before {
+    font-size: 20px;
+  }
+
+.teladress span {
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.menu {
+    margin-top: 1em;
+    font-size: 22px;
+    text-align: right;
+}
+
+.menu li {
+    display: inline;
+    border-bottom: 1em solid transparent;
+    text-align: right;
+    position: relative;
+}
+
+.menu li:not(:first-child) {
+    margin-left: 1em;
+}
+
+.menu ul li {
+    transition: 0.3s color;
+}
+
+.menu ul li:hover, .menu ul li a:target {
+    color: #faaa2b;
+}
+
+#dop-menu {
+    visibility: hidden;
+    background-color: rgba(233, 233, 233, 0.9);
+    position: absolute;
+    width: 11em;
+    display: block;
+    color: black;
+    left: 50%;
+    margin-top: 1em;
+    margin-left: -5em;
+}
+
+li:hover #dop-menu {
+    visibility: visible;
+    animation: anim1 0.5s ease-in;
+}
+
+@keyframes anim1 {
+    from {margin-top: 220px; opacity: 0;}
+    to {margin-top: 1em; opacity: 1;}
+}
+
+#dop-menu li {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    border: 0;
+    margin: 0;
+}
+/*!!!!!!!!!!!!!!! КОНЕЦ ШАПКИ !!!!!!!!!!!!!!!*/
+
+/*НАЧАЛО НЕСКОЛЬКО СЛОВ О НАС*/
+.container-text-about {
+    background: radial-gradient(#ededed, transparent);
+}
+
+ .container-text-about .about-text {
+     max-width: 1200px;
+     margin: 0 auto 0 auto;
+     padding: 2em 1em 2em 1em;
+ }
+
+ .about-text h2 {
+     font-size: 24px;
+     font-family: serif;
+     margin: 1em 0 1em 0;
+ }
+
+ .about-text a {
+    font-size: 18px;
+    line-height: 2;
+    margin: 1em 0 1em 0;
+    transition: 0.3s color;
+}
+
+.about-text a:hover {
+    color: #faaa2b;
+}
+
+.about-text p {
+    font-size: 14px;
+    line-height: 2;
+    margin: 1em 0 1em 0;
+}
+
+/*КОНЕЦ НЕСКОЛЬКО СЛОВ О НАС*/
+
+/*НАЧАЛО 3 ФОТО С ТЕКСТОМ*/
+.main1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background:
+    radial-gradient(#faaa2b -4px, transparent 10px),
+    radial-gradient(#faaa2b -4px, transparent 10px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 75px, transparent 75px, #A4A4A4 75px, #a4a4a4 75px, transparent 78px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #FFF;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-attachment: fixed;
+}
+
+.facts-main1 {
+    padding: 1em 0 0 0;
+    margin: 0 1em 0 1em;
+    width: 380px;
+    transition: 0.3s all;
+}
+
+.facts-main1:hover {
+    box-shadow: 10px 10px 20px grey;
+    transform: scale(1.02);
+    border-radius: 15px;
+}
+
+.facts-main1 .text-fact {
+    line-height: 1.7;
+    padding: 1em 0 2em 0;
+    border-bottom: solid #e6e6e6 1px;
+}
+
+.name-fact {
+    font-size: 24px;
+}
+
+.image-fact {
+    padding: 10px;
+    margin-bottom: 1em;
+    background-image: url("../img/back/back-top.png");
+}
+
+.image-fact img {
+    width: 100%;
+}
+
+.text-fact {
+    font-size: 18px;
+    min-height: 210px;
+}
+
+.read-more {
+    font-size: 18px;
+    margin: 1em 0 2em 0;
+    
+}
+
+.read-more a, .name-fact a {
+    transition: 0.3s color;
+}
+
+.read-more a:hover, .name-fact a:hover {
+    color: #faaa2b;
+    
+}
+/*КОНЕЦ 3 ФОТО С ТЕКСТОМ*/
+
+/*НАЧАЛО МИССИЯ ВИДЕНИЕ*/
+.mission-container {
+    display: flex;
+    justify-content: center;
+    background: url("../img/back/back-top.png") repeat;
+}
+
+.mission {
+    display: grid;
+    grid-template-columns: repeat(2, 70px 1fr);
+    grid-template-rows: auto repeat(2, auto);
+    column-gap: 2em;
+    row-gap: 2em;
+    max-width: 1170px;
+    margin: 2em 1em;
+}
+
+.mission-name {
+    font-size: 24px;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.pict1 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.pict2 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.pict3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.pict4 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.pict1, .pict2, .pict3, .pict4 {
+    color: white;
+    background: #faaa2b;
+    height: 70px;
+    font-size: 48px;
+}
+
+.pict1 div, .pict2 div, .pict3 div, .pict4 div {
+    text-align: center;
+    margin-top: 11px;
+}
+
+
+.text1 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.text2 {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.text3 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.text4 {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.text1 a, .text2 a, .text3 a, .text4 a {
+    line-height: 1.5;
+    font-size: 18px;
+    transition: 0.3s color;
+}
+
+.text1 a:hover, .text2 a:hover, .text3 a:hover, .text4 a:hover {
+    color: #faaa2b; 
+}
+
+.text {
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 2em;
+}
+
+
+/*КОНЕЦ МИССИЯ ВИДЕНИЕ*/
+
+/*НАЧАЛО ЧАСТИ ПЕРЕПЛАНИРОВКА*/
+.main3 {
+    background: #ededed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pic-expert img {
+    width: 550px;
+}
+
+.your-plan-container {
+    margin-left: 2em;
+    width: 55%;
+}
+
+.your-plan > a {
+    font-size: 28px;
+    font-family: serif;
+}
+
+.your-plan .plan-text {
+    margin-top: 1em;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.your-plan .more {
+    font-size: 14px;
+    margin-top: 2em;
+}
+
+.your-plan a {
+    transition: 0.3s color;
+}
+
+.your-plan a:hover {
+    color: #faaa2b;
+}
+
+/*КОНЕЦ ЧАСТИ ПЕРЕПЛАНИРОВКА*/
+
+/*НАЧАЛО ЧАСТИ НАША КОМАНДА*/
+.work-team-container {
+    margin: 0 auto;
+}
+
+.team-name {
+    margin: 1em 0;
+    text-align: center;
+    font-size: 30px;
+    font-family: serif;
+}
+
+.work-team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.team {
+    width: 300px;
+    background: #faaa2b;
+    margin: 1em;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.team:hover {
+    transform: scale(1.02);
+    box-shadow: 12px 12px 23px gray;
+    border-radius: 15px;
+}
+
+.team:hover img {
+    border-radius: 15px 15px 0 0;
+}
+
+.team img {
+    width: 100%;
+    transition-duration: 0.4s;
+}
+
+.team-text {
+    margin: 1em;
+}
+
+.team-text .name {
+    margin-bottom: 1em;
+}
+
+.team-text a {
+    font-size: 24px;
+    font-family: serif;
+    transition: 0.3s color;
+}
+
+.team-text a:hover {
+    color: black;
+}
+
+.team-text p {
+    line-height: 2em;
+    font-size: 14px;
+}
+
+/*КОНЕЦ ЧАСТИ НАША КОМАНДА*/
+
+/******НАЧАЛО МЕДИА*********/
+
+@media only all and (max-width: 1300px) {
+    /*начало шапки*/
+    .top-top-container .top-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top-container .nazv, .top-container .container_teladress {
+        margin: 0 auto;
+    }
+
+    .container_teladress .teladress {
+        text-align: center;
+    }
+    /*конец шапки*/
+
+    /*начало перепланировка*/
+    div.pic-expert img {
+        width: 100%;
+    }
+
+    .your-plan {
+        margin: 1em;
+    }
+
+    div.your-plan > a {
+        font-size: 24px;
+    }
+
+    div.your-plan .plan-text {
+        font-size: 14px;
+    }
+
+    /*конец перепланировка*/
+
+}
+
+@media only all and (max-width: 1200px) {
+    /*начало 3 фото с текстом*/
+    div.name-fact {
+        font-size: 20px;
+    }
+
+    div.text-fact {
+        font-size: 16px;
+        min-height: 220px;
+    }
+
+    /*конец 3 фото с текстом*/
+}
+    
+
+@media only all and (max-width: 1000px) {
+    /*начало о нас*/
+    div.container-text-about .about-text {
+        text-align: center;
+    }
+
+    /*конец о нас*/
+
+    /*начало 3 фото с текстом*/
+    div.main1 {
+        flex-direction: column;
+    }
+
+    div.image-fact {
+        box-shadow: 0 0 29px #faaa2b;
+    }
+
+    div.main1 .facts-main1 {
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    .facts-main1 .text-fact {
+        min-height: fit-content;
+    }
+
+    div.read-more {
+        text-align: right;
+    }
+    /*конец 3 фото с текстом*/
+
+    /*начало миссия, видение и ценности*/
+    div.mission {
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+    }
+
+    div.pict1, div.pict2, div.pict3, div.pict4 {
+        margin: 0.5em 0;
+    }
+
+    div.mission-name {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    /*конец миссия видение и ценности*/
+
+    /*начало перепланировка*/
+    div.main3 {
+        flex-direction: column-reverse;
+    }
+
+    div.your-plan-container {
+        width: 90%;
+    }
+    /*конец перепланировка*/
+
+    /*начало наша команда*/
+    div.work-team {
+        flex-direction: column;
+    }
+
+    div.team {
+        margin: 0.5em auto;
+        width: 40%;
+    }
+
+    /*конец наша команда*/
+}
+
+
+@media only all and (max-width: 700px) {
+    /*начало шапки*/
+    div.nazv {
+        font-size: 40px;
+    }
+
+    div.teladress {
+        font-size: 24px;
+    }
+
+    div.teladress span {
+        font-size: 12px;
+    }
+
+    div.menu {
+        font-size: 17px;
+    }
+
+    /*конец шапки*/
+
+    /*начало наша команда*/
+
+    div.work-team .team {
+        width: 50%;
+    }
+
+    /*конец наша команда*/
+
+    /*начало подвала*/
+    div.footer p {
+        font-size: 11px;
+    }
+
+    /*конец подвала*/
+}
+/*********КОНЕЦ МЕДИА**********/
+
+
+
+/*НАЧАЛО ПОДВАЛА*/
+
+.footer {
+    background: #ededed;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer #policy {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: solid black 1px;
+}
+
+.footer a {
+    transition: 0.3s color;
+}
+
+.footer a:hover {
+    color: #faaa2b;
+}
+
+/*кнопка наверх*/
+#backTop {
+    height: 60px;
+    width: 60px;
+    background: #faaa2b;
+    border-radius: 25%;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 2.8;
+    animation: buttontop 1s ease-in-out;
+    transition: transform 1s;
+}
+
+#backTop:hover {
+    transform: scale(1.1);
+}
+
+@keyframes buttontop {
+    from {opacity: 0; transform: translateY(-140%);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/*максимальная ширина*/
+.wrapper {
+    max-width: 1920px;
+    margin: auto;
+}
+
+/*плавная загрузка страницы*/
+@keyframes fade-in {   
+    0% {opacity: 0;}
+    100% {opacity: 1;}   
+}
+ 
+body {
+  animation: fade-in 1.5s linear;
+}
