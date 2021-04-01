@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Tetris</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!--НАЧАЛО НАДПИСИ TETRIS-->
+  <header>
+    <div class="neon">
+      <span class="text" data-text="tetris">tetris</span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </header>
+  <!--КОНЕЦ НАДПИСИ TETRIS-->
+
+  <div class="grid">
+      <canvas id="board" class="game-board"></canvas>
+      <div class="right-column">
+          <div>
+              <p>Score: <span id="score">0</span></p>
+              <p>Lines: <span id="lines">0</span></p>
+              <p>Level: <span id="level">0</span></p>
+              <canvas id="next" class="next"></canvas>
+          </div>
+          <button onclick="rules()" class="rules-button" id='button'>Game rules</button>
+          <button onclick="pause()" class="pause-button" id='button'>Pause</button>
+          <button onclick="play()" class="play-button" id='button'>Play</button>
+      </div>
+  </div>
+
+  <div class="game-rules" id="close-rules">
+    <div id='text-rules'>
+      <p>Случайные фигурки тетрамино падают сверху в прямоугольный стакан шириной 
+      10 и высотой 20 клеток. В полёте игрок может поворачивать фигурку на 90° и двигать её по 
+      горизонтали. Также можно «сбрасывать» фигурку, то есть ускорять её падение, когда уже решено, 
+      куда фигурка должна упасть. Фигурка летит до тех пор, пока не наткнётся на другую фигурку либо 
+      на дно стакана. Если при этом заполнился горизонтальный ряд из 10 клеток, он пропадает и всё, 
+      что выше него, опускается на одну клетку. Дополнительно показывается фигурка, которая будет 
+      следовать после текущей — это подсказка, которая позволяет игроку планировать действия. 
+      Темп игры постепенно ускоряется. Игра заканчивается, когда новая фигурка не может поместиться 
+      в стакан. Игрок получает очки за каждый заполненный ряд и за самостоятельный сброс фигурки, поэтому его задача — заполнять ряды, 
+      не заполняя сам стакан (по вертикали) как можно дольше, чтобы таким образом получить как можно 
+      больше очков.</p>
+    </div>
+    <button class="continue-button" id='button'>Continue</button>
+
+  </div>
+  
+    <div class="mobile-control">
+      <button class="up" id="rotate_button">ROTATE</button>
+      <button class="left" id="left_button">LEFT</button>
+      <button class="center" id="down_button">DOWN</button>
+      <button class="right" id="right_button">RIGHT</button>
+      <button class="down" id="drop_button">DROP</button>
+    </div>
+  
+
+  <audio id=audioGame preload loop>
+    <source src="audio/tetroGame.ogg" type="audio/ogg; codecs=vorbis">
+    <source src="audio/tetroGame.mp3" type="audio/mpeg">
+  </audio>
+  <audio id=audioGameOver preload>
+    <source src="audio/gameOver.ogg" type="audio/ogg; codecs=vorbis">
+    <source src="audio/gameOver.mp3" type="audio/mpeg">
+  </audio>
+  <audio id=audioLine preload>
+    <source src="audio/destrLine.ogg" type="audio/ogg; codecs=vorbis">
+    <source src="audio/destrLine.mp3" type="audio/mpeg">
+  </audio>
+
+  <script type="text/javascript" src="constants.js"></script>
+  <script type="text/javascript" src="board.js"></script>
+  <script type="text/javascript" src="piece.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="animbutton.js"></script>
+</body>
+</html>
